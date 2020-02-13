@@ -1,0 +1,31 @@
+\documentclass[tikz,dvipsnames]{standalone}
+\usetikzlibrary{calc,quotes}
+\usetikzlibrary{backgrounds, shapes,patterns}
+
+
+\tikzset{
+ head/.style ={yshift=1.5cm,signal,signal to=south,minimum width=0.8cm, minimum height=1.1cm,draw=black,fill=white,line width=1.5pt},
+ %
+ headcell/.style = {fill=white, line width=1.5, draw=black},
+ active/.style = {fill=white, line width=1.5, draw=black,pattern=north east lines},
+ celldiv/.style = {line width=1.5,  draw=black},
+ tape/.style = {rectangle, fill=white, line width=1.5pt, draw=black,minimum size=1.0cm},
+ endtape/.style = {minimum height=1.0cm,minimum width=1.5cm,line width=0pt,draw=none,
+                    append after command={\pgfextra{
+                    \draw[tape,line width=1.5pt,left color=white, right color=white] (\tikzlastnode.north east) to (\tikzlastnode.north west) to (\tikzlastnode.south west) to (\tikzlastnode.south east);}}
+                    },
+ accept/.style={fill=white,draw=black},
+ reject/.style={fill=white,draw=black}
+}
+
+
+\newcommand{\blank}{}
+
+\begin{document}
+\boldmath
+\large
+
+\begin{tikzpicture}
+
+\end{tikzpicture}
+\end{document}
